@@ -1,5 +1,5 @@
 class WeatherModel {
-  String getWeatherIcon(int condition) {
+  /*String getWeatherIcon(int condition) {
     if (condition < 300) {
       return '🌩';
     } else if (condition < 400) {
@@ -29,5 +29,5 @@ class WeatherModel {
     } else {
       return 'Bring a 🧥 just in case';
     }
-  }
+  }*/
 }
