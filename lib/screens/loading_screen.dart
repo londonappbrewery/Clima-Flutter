@@ -1,4 +1,5 @@
 import 'package:clima/screens/location_screen.dart';
+import 'package:clima/utilities/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -30,9 +31,19 @@ class _LoadingScreenState extends State<LoadingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: SpinKitChasingDots(
-          color: Colors.white,
-          size: 100.0,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            SpinKitChasingDots(
+              color: Colors.white,
+              size: 100.0,
+            ),
+            Text(
+              '...searching for location',
+              style: kButtonTextStyle,
+            ),
+          ],
         ),
       ),
     );

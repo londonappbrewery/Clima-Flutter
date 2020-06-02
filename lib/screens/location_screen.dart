@@ -48,7 +48,7 @@ class _LocationScreenState extends State<LocationScreen> {
         decoration: BoxDecoration(
           image: DecorationImage(
             //Todo change the image for the location screen
-            image: AssetImage('images/location_background.jpg'),
+            image: AssetImage('images/location_background.png'),
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
                 Colors.white.withOpacity(0.8), BlendMode.dstATop),
@@ -124,6 +124,14 @@ class _LocationScreenState extends State<LocationScreen> {
               //TODO windspeed and direction,
               //TODO feels like,
               //TODO five day forecast at the bottom of the screen
+              Padding(
+                padding: EdgeInsets.only(right: 15.0),
+                child: Text(
+                  '$weatherMessage in $cityName',
+                  textAlign: TextAlign.right,
+                  style: kMessageTextStyle,
+                ),
+              ),
             ],
           ),
         ),
