@@ -124,14 +124,14 @@ class _LocationScreenState extends State<LocationScreen> {
               //TODO windspeed and direction,
               //TODO feels like,
               //TODO five day forecast at the bottom of the screen
-              Padding(
-                padding: EdgeInsets.only(right: 15.0),
-                child: Text(
-                  '$weatherMessage in $cityName',
-                  textAlign: TextAlign.right,
-                  style: kMessageTextStyle,
-                ),
-              ),
+//              Padding(
+//                padding: EdgeInsets.only(right: 15.0),
+//                child: Text(
+//                  '$weatherMessage in $cityName',
+//                  textAlign: TextAlign.right,
+//                  style: kMessageTextStyle,
+//                ),
+//              ),
             ],
           ),
         ),
