@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:clima/services/location.dart';
+import 'package:weather/weather.dart';
+import 'package:clima/services/api.dart';
 
 class LoadingScreen extends StatefulWidget {
   @override
@@ -6,17 +9,24 @@ class LoadingScreen extends StatefulWidget {
 }
 
 class _LoadingScreenState extends State<LoadingScreen> {
+  String key = api_key;
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  void getLocationAndWeather() async {
+    Location location = Location();
+    await location.getCurrentLocation();
+    WeatherFactory wf = WeatherFactory(key);
+    Weather w = await wf.currentWeatherByLocation(
+        location.latitude, location.longitude);
+    print(w);
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            //Get the current location
-          },
-          child: Text('Get Location'),
-        ),
-      ),
-    );
+    getLocationAndWeather();
+    return Scaffold();
   }
 }
