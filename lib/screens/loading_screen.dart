@@ -1,3 +1,4 @@
+// import 'package:clima/screens/city_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoadingScreen extends StatefulWidget {
@@ -10,9 +11,9 @@ class _LoadingScreenState extends State<LoadingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           onPressed: () {
-            //Get the current location
+            //Get the current location 
           },
           child: Text('Get Location'),
         ),
